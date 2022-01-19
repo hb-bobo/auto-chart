@@ -1,0 +1,79 @@
+{
+  "id": "2078693",
+  "name": "auto-chart",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "17294780",
+      "name": "multiple_y_axes_line",
+      "font_class": "multiple-y-axes-line-chart",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "17294751",
+      "name": "scatter-chart",
+      "font_class": "scatter-chart",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "17294750",
+      "name": "mixed-colum-bar-line-chart",
+      "font_class": "mixed-colum-bar-line-chart",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "17294708",
+      "name": "bar-stacked-chart",
+      "font_class": "stacked-bar-chart",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "17294709",
+      "name": "bar-stacked-chart",
+      "font_class": "stacked-column-bar-chart",
+      "unicode": "e7f6",
+      "unicode_decimal": 59382
+    },
+    {
+      "icon_id": "17294707",
+      "name": "bar-column-chart",
+      "font_class": "column-bar-chart",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "17294706",
+      "name": "bar-basic-chart",
+      "font_class": "bar-chart",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "17294705",
+      "name": "line-chart",
+      "font_class": "line-chart",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "17294703",
+      "name": "pie_doughnut_chart",
+      "font_class": "pie-doughnut-chart",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "17294720",
+      "name": "radar chart",
+      "font_class": "radar-chart",
+      "unicode": "e7f7",
+      "unicode_decimal": 59383
+    }
+  ]
+}

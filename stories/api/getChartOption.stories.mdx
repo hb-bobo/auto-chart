@@ -1,0 +1,59 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+<Meta title="api/getChartOption" />
+
+## getChartOption
+
+通过该方法可以指定一个图表类型
+
+```ts
+import echarts from 'echarts';
+import {
+    getChartOption,
+    CHART_TYPES,
+    transform,
+} from '@jd/auto-chart';
+// 通常拿到的数据格式
+const source = [
+    {
+        date: '2020-10-01',
+        key2: 0.2,
+        key3: 0.4,
+        key4: 0.6,
+    },
+    {
+        date: '2020-10-02',
+        key2: 0.6,
+        key3: 0.4,
+        key4: 0.9,
+    },
+    {
+        date: '2020-10-03',
+        key2: 0.4,
+        key3: 0.4,
+        key4: 0.2,
+    }
+];
+
+ const alias = {
+    date: 'date',
+    key2: '整体达成率',
+    key3: '提前履约率',
+    key4: '超时履约率',
+};
+const dataset = transform.arrayToDataset(source, alias);
+
+const options = getChartOption(CHART_TYPES.line, {
+    echartOptions: {
+        dataset: dataset,
+    },
+    dataTransform: (dimension: string, value: any) => {
+        return `${tofixedTwo(value * 100)}%`;
+    },
+    // 渲染后获取宽度，会根据宽度做一定样式优化
+    // width: containerRef.current.clientWidth,
+});
+if (options) {
+    echarts.setOption(options);
+}
+```

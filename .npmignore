@@ -1,0 +1,8 @@
+.github/
+coverage/
+__test__/
+test*
+example/
+storybook-static/
+node_modules/
+.DS_Store

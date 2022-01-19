@@ -1,0 +1,16 @@
+.auto-chart{
+    position: relative;
+    height: 500px;
+}
+.auto-chart .chart-skeleton{
+    display: flex;;
+    align-items: center;
+    align-content: center;
+    background-color: #EEE;
+}
+.auto-chart .chart-skeleton-icon{
+    flex: 1;
+    width: 10em;
+    height: 10em;
+    color: #CCC;
+}

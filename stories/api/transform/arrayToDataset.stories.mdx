@@ -1,0 +1,66 @@
+import { Meta, Story, Source } from '@storybook/addon-docs/blocks';
+import jsBeautify from 'js-beautify';
+import { arrayToDataset } from 'AUTO_CHART_SRC/transform'
+
+<Meta title="api/Transform/arrayToDataset" />
+
+## arrayToDataset(普通对象数组转为dataset)
+```tsx
+
+import {
+    arrayToDataset,
+} from '@jd/auto-chart/lib/transform';
+
+const source = [
+    {
+        name: "维度1",
+        value: 1,
+        value2: 2
+    },
+    {
+        name: "维度2",
+        value: 1,
+        value2: 2
+    },
+    {
+        name: "维度3",
+        value: 1,
+        value2: 2
+    }
+];
+const alias = {
+    name: "name",
+    value: "攻击力",
+    value2: "耐久力"
+};
+
+const newDataset = arrayToDataset(source, alias));
+
+```
+
+<Canvas>
+    <Source language='js'
+    code={jsBeautify.js(JSON.stringify(
+        arrayToDataset([
+            {
+                name: "维度1",
+                value: 1,
+                value2: 2
+            },
+            {
+                name: "维度2",
+                value: 1,
+                value2: 2
+            },
+            {
+                name: "维度3",
+                value: 1,
+                value2: 2
+            }
+        ], {
+            name: "name",
+            value: "攻击力",
+            value2: "耐久力"
+        })
+    ))} />
+</Canvas>

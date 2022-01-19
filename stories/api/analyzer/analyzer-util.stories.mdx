@@ -1,0 +1,29 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+<Meta title="api/analyzer/util" />
+
+## util
+```ts
+import {
+    uitl,
+} from '@jd/auto-chart/lib/analyzer';
+
+utils.isDigit
+
+utils.isNull
+
+utils.isInteger
+
+utils.isFloat
+
+utils.isDate
+
+utils.parserStringNumber("-1.1%")
+// {
+//     isNumber: true,
+//     number: -1.1,
+//     abs: 1.1,
+//     unit: "%",
+//     digit: 1
+// }
+```

@@ -1,0 +1,45 @@
+import { Meta, Story, Preview, ArgsTable } from '@storybook/addon-docs/blocks';
+
+<Meta title="api/autoChart" />
+
+## autoChart
+
+autoChart是核心方法，通过dataset返回一个echart可用的opitons,可通过echartOptions参数覆盖
+```ts
+import {
+    autoChart,
+} from '@jd/auto-chart';
+
+const dataset = {
+    dimensions: ["option", "percent"],
+    source: [
+        {
+            option: "京东超级品牌日",
+            percent: 87
+        },
+        {
+            option: "京东超级神券日",
+            percent: 82
+        },
+        {
+            option: "京东超级秒杀日",
+            percent: 79
+        },
+        {
+            option: "京东plus day",
+            percent: 68
+        }
+    ]
+};
+
+// 得到一个echart可用的options
+const chartOptions = autoChart(dataset, {
+    echartOptions: {
+        // echart options
+        tooltip: {
+            ///
+        },
+    },
+});
+
+```

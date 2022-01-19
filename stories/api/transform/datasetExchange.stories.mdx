@@ -1,0 +1,70 @@
+import { Meta, Story, Canvas  } from '@storybook/addon-docs/blocks';
+import DatasetExchangeDemo from './_component/DatasetExchangeDemo';
+
+<Meta title="api/Transform/datasetExchange"  />
+
+
+## datasetExchange(行与列转换)
+```ts
+import {
+    datasetExchange,
+} from '@jd/auto-chart/lib/transform';
+
+const dataset = {
+    dimensions: ["维度名称", "百分比", "分值"],
+    source: [
+        {
+            维度名称: "京东超级品牌日",
+            百分比: 87,
+            分值: 34,
+        },
+        {
+            维度名称: "京东超级神券日",
+            百分比: 82,
+            分值: 22,
+        },
+        {
+            维度名称: "京东超级秒杀日",
+            百分比: 79,
+            分值: 55,
+        },
+        {
+            维度名称: "京东plus day",
+            百分比: 68,
+            分值: 77,
+        },
+    ],
+};
+
+datasetExchange(dataset);
+// 输出如下
+const target =  {
+    dimensions: [
+        "维度名称",
+        "京东超级品牌日",
+        "京东超级神券日",
+        "京东超级秒杀日",
+        "京东plus day",
+    ],
+    source: [
+        {
+            维度名称: "百分比",
+            京东超级品牌日: 87,
+            京东超级神券日: 82,
+            京东超级秒杀日: 79,
+            "京东plus day": 68,
+        },
+        {
+            维度名称: "分值",
+            京东超级品牌日: 34,
+            京东超级神券日: 22,
+            京东超级秒杀日: 55,
+            "京东plus day": 77,
+        },
+    ],
+};
+
+
+```
+
+<Canvas><DatasetExchangeDemo/></Canvas>

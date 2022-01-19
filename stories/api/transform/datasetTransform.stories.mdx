@@ -1,0 +1,47 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import DatasetTransformDemo from './_component/DatasetTransformDemo';
+
+<Meta title="api/Transform/datasetTransform" />
+
+## datasetTransform(数据集数据转换)
+```tsx
+
+import {
+    datasetTransform,
+} from '@jd/auto-chart/lib/transform';
+
+const dataset = {
+    dimensions: ["维度名称", "分值"],
+    source: [
+        {
+            维度名称: "京东超级品牌日",
+            分值: 3433333333,
+        },
+        {
+            维度名称: "京东超级神券日",
+            分值: 224444444,
+        },
+        {
+            维度名称: "京东超级秒杀日",
+            分值: 55444444,
+        },
+        {
+            维度名称: "京东plus day",
+            分值: 7744444,
+        },
+    ],
+};
+
+const newDataset = datasetTransform(dataset, function ({
+    dimensionName,
+    value,
+}) {
+    if (dimensionName === "分值") {
+        return `${Math.round((value as number) / 10000)}万分`;
+    }
+    return value;
+});
+
+```
+
+<Canvas><DatasetTransformDemo/></Canvas>

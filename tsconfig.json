@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "esModuleInterop": true,    
+        "declaration": true,
+        "target": "es5",    
+        "jsx": "react",                    
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "lib":["es2018", "DOM"],                
+        "outDir": "./lib",   
+        "baseUrl": "./",
+        "paths": {
+            "AUTO_CHART_SRC/*": ["./src/*"],
+            "src/*": ["./src/*"],
+            "AUTO_CHART_LIB/*": ["./lib/*"]
+        },
+        "skipLibCheck": true
+    },
+    "exclude": [
+        "lib",
+        "node_modules"
+    ]
+}

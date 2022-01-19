@@ -1,0 +1,54 @@
+import { Meta, Story, Canvas, Source } from '@storybook/addon-docs/blocks';
+import jsBeautify from 'js-beautify';
+import {
+    type,
+} from 'src/analyzer';
+
+<Meta title="api/analyzer/type" />
+
+
+## type(分析一组数据)
+
+
+### 数值类型
+```ts
+import {
+    type,
+} from '@jd/auto-chart/lib/analyzer';
+
+const typeInfo = type(['2%', '3%', '4%', '5%']);
+
+```
+
+<Source
+    language='js'
+    code={jsBeautify.js(JSON.stringify(type(['2%', '3%', '4%', '5%'])))}
+/>
+
+
+### 维度
+```ts
+import {
+    type,
+} from '@jd/auto-chart/lib/analyzer';
+
+const typeInfo = type(['2017年', '2018年', '2019年', '2020年']);
+
+```
+
+<Source
+    language='js'
+    code={jsBeautify.js(JSON.stringify(type(['2017年', '2018年', '2019年', '2020年'])))}
+/>
+
+### object数组
+```ts
+import {
+    type,
+} from '@jd/auto-chart/lib/analyzer';
+
+const typeInfo = type([{ key1: "2%", value2: 2 }, { key1: "4%", , value2: 2  }], "key1");
+
+```
+
+
